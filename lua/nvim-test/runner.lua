@@ -19,7 +19,7 @@ function Runner:init(config, queries)
   self = setmetatable({}, Runner)
   self.queries = queries or {}
   for ft, query in pairs(self.queries) do
-    ts.set_query(ft, "nvim-test", query)
+    ts.query.set(ft, "nvim-test", query)
   end
   self:setup(config)
   return self
